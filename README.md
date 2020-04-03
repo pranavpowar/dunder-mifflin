@@ -1,1 +1,1 @@
-# Dunder Miffin Paper Company, Inc
+# Dunder Mifflin Paper Company, Inc
