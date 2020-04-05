@@ -6,6 +6,10 @@ import { Component } from "@angular/core";
 })
 export class ProductListComponent {
   pageTitle: string = "Product List";
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
+  listFilter: string = "A4 Paper";
   products: any[] = [
     {
       "productID": 2,
@@ -28,4 +32,8 @@ export class ProductListComponent {
       "imageURL": "https://5.imimg.com/data5/PX/IX/MY-38990110/post-it-sticky-notes-500x500.jpg"
     }
   ];
+
+  toggleVisiblity(): void {
+    this.showImage = !this.showImage;
+  }
 }
