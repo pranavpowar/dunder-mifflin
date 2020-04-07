@@ -30,7 +30,7 @@ export class ProductListComponent implements OnInit {
       "releaseDate": "January 20, 2003",
       "description": "Set of 300 renewed A4 size papers",
       "price": 32.99,
-      "starRating": 4.2,
+      "starRating": 4.0,
       "imageUrl": "https://sc02.alicdn.com/kf/UTB8qDqZtYPJXKJkSafSq6yqUXXaj.jpg_350x350.jpg"
     },
     {
@@ -58,6 +58,10 @@ export class ProductListComponent implements OnInit {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLowerCase().indexOf(filterBy) !== -1);
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = "Product List : " + message;
   }
 
   ngOnInit(): void {
